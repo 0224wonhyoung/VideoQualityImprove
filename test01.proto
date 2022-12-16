@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message SomeMessage {
+
+    message Mat {
+        uint32 rows = 2;
+        uint32 cols = 3;
+        repeated uint32 data = 5;
+    }
+
+    message Box {
+        uint32 boxID = 1;
+        uint32 frame = 2;
+        uint32 posX = 3;
+        uint32 posY = 4;
+        Mat mat = 5;
+    }
+
+    Box box = 1;
+}
